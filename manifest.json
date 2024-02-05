@@ -1,0 +1,23 @@
+{
+    "name": "EasyShare",
+    "description" : "Shares any photo or quote on facebook",
+    "version" : "1.0",
+    "permissions" : ["contextMenus", "activeTab"],
+    "icons" : {
+        "32" : "32.png",
+        "64" : "64.png",
+        "128" : "128.png"
+
+    }, 
+    "background": {
+        "scripts": ["background.js"]
+    },
+    
+    "content_scripts": [
+        {
+            "matches": ["*://www.google.com/*"],
+            "js":["index.js"]
+        }
+    ],
+    "manifest_version": 2
+}
